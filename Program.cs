@@ -9,6 +9,7 @@ public class Program
 {
     public static async Task Main(string[] args)
     {
+        Title.Print();
         // Configuration
         var config = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)

@@ -3,10 +3,13 @@ using System.Text.Json;
 using Spectre.Console;
 using Spectre.Console.Cli;
 using RobinhoodAccountConsole.Models;
+using RobinhoodAccountConsole.Commands.Settings;
+
+using System;
 
 namespace RobinhoodAccountConsole.Commands;
 
-public class AccountCommand : AsyncCommand<AccountCommand.Settings>
+internal class AccountCommand : AsyncCommand<AccountCommand.Settings>
 {
     private readonly ApiServer _apiServer;
     private static string _url = "https://trading.robinhood.com/api/v1/crypto/trading/accounts/";
@@ -16,13 +19,19 @@ public class AccountCommand : AsyncCommand<AccountCommand.Settings>
         _apiServer = apiServer;
     }
 
-    public class Settings : CommandSettings
+    internal class Settings : BaseCommandSettings
     {
-
+        // Place any custom settings here
     }
 
     public override async Task<int> ExecuteAsync(CommandContext context, Settings settings)
     {
+
+        if (settings.Debug)
+        {
+            if (!DebugDisplay.Print(settings, _apiServer))
+                return 0;
+        }
         string[] columns = new[] { "" };
         var table = new Table().Centered();
         table.HideHeaders();
