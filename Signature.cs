@@ -2,9 +2,9 @@
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Crypto.Signers;
 using Org.BouncyCastle.Crypto;
-using RobinhoodCreateSignature.Models;
+using RobinhoodAccountConsole.Models;
 
-namespace RobinhoodCreateSignature;
+namespace RobinhoodAccountConsole;
 
 internal class Signature
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Spectre.Console.Cli;
 
-namespace RobinhoodCreateSignature;
+namespace RobinhoodAccountConsole;
 
 public sealed class TypeRegistrar : ITypeRegistrar
 {

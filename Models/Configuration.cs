@@ -1,5 +1,4 @@
-namespace RobinhoodCreateSignature.Models;
-
+namespace RobinhoodAccountConsole.Models;
 public class Configuration
 {
     public required ApiServer ApiServer { get; set; }

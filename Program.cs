@@ -1,20 +1,10 @@
-﻿using System;
-using System.Reflection;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Signers;
-using Org.BouncyCastle.Security;
-using RobinhoodCreateSignature;
-using RobinhoodCreateSignature.Models;
+using RobinhoodAccountConsole.Models;
 using Spectre.Console;
 using Spectre.Console.Cli;
 
+namespace RobinhoodAccountConsole;
 public class Program
 {
     public static async Task Main(string[] args)

@@ -1,6 +1,6 @@
 ﻿using Spectre.Console.Cli;
 
-namespace RobinhoodCreateSignature;
+namespace RobinhoodAccountConsole;
 
 public sealed class TypeResolver : ITypeResolver, IDisposable
 {

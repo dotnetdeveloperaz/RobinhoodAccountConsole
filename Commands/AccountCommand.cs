@@ -2,9 +2,9 @@
 using System.Text.Json;
 using Spectre.Console;
 using Spectre.Console.Cli;
-using RobinhoodCreateSignature.Models;
+using RobinhoodAccountConsole.Models;
 
-namespace RobinhoodCreateSignature.Commands;
+namespace RobinhoodAccountConsole.Commands;
 
 public class AccountCommand : AsyncCommand<AccountCommand.Settings>
 {
